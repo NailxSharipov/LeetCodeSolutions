@@ -8,8 +8,10 @@
 
 import Foundation
 
-let solution = SwapNodesInPairs()
-let result = solution.swapPairs([1, 2, 3, 4].linkedList())
+let solution = ReverseNodesInKGroup()
+let result = solution.reverseKGroup([1, 2, 3, 4, 5].linkedList(), 2)
+//let result = solution.reverseKGroup([1, 2, 3, 4, 5, 6].linkedList(), 3)
+//let result = solution.reverseKGroup([].linkedList(), 3)
 //let result = solution.mergeKListsArray([nil])
 //let result = solution.mergeKListsArray([])
 
