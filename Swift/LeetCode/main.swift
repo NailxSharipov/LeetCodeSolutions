@@ -8,12 +8,15 @@
 
 import Foundation
 
-let solution = GenerateParentheses()
-let result = solution.generateParenthesis(3)
+let solution = RegularExpressionMatching()
+//let result = solution.isMatch("mississippi", "mis*is*p*.")
+//let result = solution.isMatch("mississippi", "mis*is*ip*.")
+//let result = solution.isMatch("a", "")
+let result = solution.isMatch("aabcbcbcaccbcaabc", ".*a*aa*.*b*.c*.*a*")
+
+
+print(result)
 //let result = solution.reverseKGroup([1, 2, 3, 4, 5, 6].linkedList(), 3)
 //let result = solution.reverseKGroup([].linkedList(), 3)
 //let result = solution.mergeKListsArray([nil])
 //let result = solution.mergeKListsArray([])
-
-print(result)
-
