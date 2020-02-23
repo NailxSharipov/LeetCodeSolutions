@@ -10,54 +10,48 @@ import Foundation
 
 final class GenerateParentheses {
     
-    final func generateParenthesis(_ n: Int) -> [String] {
-        let m = n * (n + 1) / 2 - n % 2
+    private struct Data {
+        let str: String
+        let sum: Int
 
-        if n == 0 {
-            return []
+        init(str: String, sum: Int) {
+            self.str = str
+            self.sum = sum
         }
-        
-        var a = [String]()
-        a.reserveCapacity(m)
-        var b = [String]()
-        b.reserveCapacity(m)
+    }
 
-        a.append("()")
-        
-        for _ in 1..<n {
-            var s = a[0]
-            s.append("()")
-            b.append(s)
-            
-            s = a[0]
-            s.insert("(", at: s.startIndex)
-            s.append(")")
-            b.append(s)
-            
-            var i = 1
-            while i < a.count {
-                let t = a[i]
-                
-                s = t
-                s.insert("(", at: s.startIndex)
-                s.append(")")
-                b.append(s)
-                
-                s = t
-                s.append("()")
-                b.append(s)
-                
-                s = "()"
-                s.append(t)
-                b.append(s)
-                
-                i += 1
+    func generateParenthesis(_ n: Int) -> [String] {
+        let m = n << 1
+        var buffer = [Data(str: "(", sum: 1)]
+
+        var newBuffer = [Data]()
+        newBuffer.reserveCapacity(m)
+        var i = 1
+        while i < m {
+            for it in buffer {
+                let sum = it.sum
+                let l = m - i
+
+                let aSum = sum + 1
+                if aSum - l <= 0 {
+                    newBuffer.append(Data(str: it.str + "(", sum: aSum))
+                }
+
+                let bSum = sum - 1
+                if bSum >= 0 {
+                    newBuffer.append(Data(str: it.str + ")", sum: bSum))
+                }
             }
-            
-            a = b
-            b.removeAll(keepingCapacity: true)
+            i += 1
+            buffer = newBuffer
+            newBuffer.removeAll(keepingCapacity: true)
+        }
+        var result = [String]()
+        result.reserveCapacity(buffer.count)
+        for b in buffer {
+            result.append(b.str)
         }
 
-        return a
+        return result
     }
 }
