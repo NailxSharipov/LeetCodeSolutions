@@ -8,14 +8,18 @@
 
 import Foundation
 
-let solution = SubstringWithConcatenationOfAllWords()
+let solution = ValidNumber()
 
-let result = solution.findSubstring("barfoothefoobarman", ["foo","bar"])
-//let result = solution.findSubstring("", [])
+//let result = solution.isNumber(" -10 ")
+//let result = solution.isNumber("e9")
+//let result = solution.isNumber(".-4")
+//let result = solution.isNumber(".1.")
+//let result = solution.isNumber("1.")
+//let result = solution.isNumber(".")
+//let result = solution.isNumber("6e6.5")
+//let result = solution.isNumber("8..e4")
+let result = solution.isNumber(" -.7e+0435")
+
 
 
 print(result)
-//let result = solution.reverseKGroup([1, 2, 3, 4, 5, 6].linkedList(), 3)
-//let result = solution.reverseKGroup([].linkedList(), 3)
-//let result = solution.mergeKListsArray([nil])
-//let result = solution.mergeKListsArray([])
