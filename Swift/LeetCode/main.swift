@@ -8,13 +8,13 @@
 
 import Foundation
 
-let solution = RemoveElement()
-var array = [0,0,1,1,1,2,2,3,3,4]
-let result = solution.removeElement(&array, 0)
+let solution = SubstringWithConcatenationOfAllWords()
+
+let result = solution.findSubstring("barfoothefoobarman", ["foo","bar"])
+//let result = solution.findSubstring("", [])
 
 
 print(result)
-print(array)
 //let result = solution.reverseKGroup([1, 2, 3, 4, 5, 6].linkedList(), 3)
 //let result = solution.reverseKGroup([].linkedList(), 3)
 //let result = solution.mergeKListsArray([nil])
