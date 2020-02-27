@@ -18,7 +18,7 @@ let solution = DivideTwoIntegers()
 //let result = solution.isNumber(".")
 //let result = solution.isNumber("6e6.5")
 //let result = solution.isNumber("8..e4")
-let result = solution.divide(10, 11)
+let result = solution.divide(10, 3)
 
 
 

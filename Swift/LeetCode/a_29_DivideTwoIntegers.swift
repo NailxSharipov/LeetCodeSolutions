@@ -42,12 +42,10 @@ class DivideTwoIntegers {
         while a >= b {
             var bb = b
             var cc = 1
-            repeat {
+            while a > (bb << 1) {
                 bb = bb << 1
                 cc = cc << 1
-            } while a > bb
-            bb = bb >> 1
-            cc = cc >> 1
+            }
             a &-= bb
             c &+= cc
         }
