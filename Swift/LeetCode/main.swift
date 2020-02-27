@@ -8,7 +8,7 @@
 
 import Foundation
 
-let solution = ImplementStrStr()
+let solution = DivideTwoIntegers()
 
 //let result = solution.isNumber(" -10 ")
 //let result = solution.isNumber("e9")
@@ -18,7 +18,7 @@ let solution = ImplementStrStr()
 //let result = solution.isNumber(".")
 //let result = solution.isNumber("6e6.5")
 //let result = solution.isNumber("8..e4")
-let result = solution.strStr("mississippi", "mississippi")
+let result = solution.divide(10, 11)
 
 
 

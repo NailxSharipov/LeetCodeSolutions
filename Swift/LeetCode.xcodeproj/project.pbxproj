@@ -37,6 +37,7 @@
 		54D2EA8A22B24D38004ECC54 /* a_21_MergeTwoSortedLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D2EA8922B24D38004ECC54 /* a_21_MergeTwoSortedLists.swift */; };
 		54D2EA8C22B276D2004ECC54 /* a_22_GenerateParentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D2EA8B22B276D2004ECC54 /* a_22_GenerateParentheses.swift */; };
 		54E80F952406B35800ADFDCB /* a_28_ImplementStrStr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E80F942406B35800ADFDCB /* a_28_ImplementStrStr.swift */; };
+		54E80F972406BB3E00ADFDCB /* a_29_DivideTwoIntegers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E80F962406BB3E00ADFDCB /* a_29_DivideTwoIntegers.swift */; };
 		54FB7D7022ADF60200EC2A14 /* a_9_PalindromeNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB7D6F22ADF60200EC2A14 /* a_9_PalindromeNumber.swift */; };
 		54FB7D8522AE628200EC2A14 /* RegularExpressionMatchingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB7D7422AE61A900EC2A14 /* RegularExpressionMatchingTests.swift */; };
 /* End PBXBuildFile section */
@@ -84,6 +85,7 @@
 		54D2EA8922B24D38004ECC54 /* a_21_MergeTwoSortedLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = a_21_MergeTwoSortedLists.swift; sourceTree = "<group>"; };
 		54D2EA8B22B276D2004ECC54 /* a_22_GenerateParentheses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = a_22_GenerateParentheses.swift; sourceTree = "<group>"; };
 		54E80F942406B35800ADFDCB /* a_28_ImplementStrStr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = a_28_ImplementStrStr.swift; sourceTree = "<group>"; };
+		54E80F962406BB3E00ADFDCB /* a_29_DivideTwoIntegers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = a_29_DivideTwoIntegers.swift; sourceTree = "<group>"; };
 		54FB7D6F22ADF60200EC2A14 /* a_9_PalindromeNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = a_9_PalindromeNumber.swift; sourceTree = "<group>"; };
 		54FB7D7222ADFABA00EC2A14 /* a_10_RegularExpressionMatching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = a_10_RegularExpressionMatching.swift; sourceTree = "<group>"; };
 		54FB7D7422AE61A900EC2A14 /* RegularExpressionMatchingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionMatchingTests.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				548C1DE12403BE8000B7CCEF /* a_30_SubstringWithConcatenationOfAllWords.swift */,
 				548C1DF62403DE3200B7CCEF /* a_65_ValidNumber.swift */,
 				54E80F942406B35800ADFDCB /* a_28_ImplementStrStr.swift */,
+				54E80F962406BB3E00ADFDCB /* a_29_DivideTwoIntegers.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				54D2EA8A22B24D38004ECC54 /* a_21_MergeTwoSortedLists.swift in Sources */,
 				5416ED0922BFF4DF00A03AB6 /* a_25_ReverseNodesInKGroup.swift in Sources */,
 				541F688D22AD881800503C3F /* a_7_ReverseInteger.swift in Sources */,
+				54E80F972406BB3E00ADFDCB /* a_29_DivideTwoIntegers.swift in Sources */,
 				54D2EA5722AE8991004ECC54 /* a_12_IntegerToRoman.swift in Sources */,
 				54FB7D7022ADF60200EC2A14 /* a_9_PalindromeNumber.swift in Sources */,
 				54D2EA7D22AFB900004ECC54 /* a_16_3SumClosest.swift in Sources */,
