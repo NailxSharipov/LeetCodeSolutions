@@ -11,78 +11,67 @@ import Foundation
 class LongestValidParentheses {
     
     func longestValidParentheses(_ s: String) -> Int {
-        let count = s.count + 1
+        let count = s.count &+ 1
         guard count > 1 else {
             return 0
         }
         
-        var map = [Int](repeating: -1, count: count)
+        var array = [Int](repeating: 0, count: count)
 
         var sum = 0
         var i = 0
+        var isPrevDown = false
         var max = 0
-        var isPrevDown = true
-        for ch in s {
-            if ch == "(" {
-                if sum < 0 {
-                    // start point
-                    sum = 0
-                    // clean buffer
-                    for _ in 0..<count {
-                        if map[sum] != -1 {
-                            map[sum] = -1
-                        } else {
-                            break
-                        }
-                    }
-                }
-                
-                // change direction from down to up
-                if sum >= 0 {
-                    let prevValueIndex = map[sum]
-                    
-                    if isPrevDown {
-                        // test
-                        if prevValueIndex != -1 {
-                            let length = i &- prevValueIndex
+        
+        array.withUnsafeMutableBufferPointer { buffer in
+            for ch in s {
+                buffer[i] = sum
+                if isPrevDown {
+                    // test
+                    var j = i
+                    while j >= 0 {
+                        let value = buffer[j]
+                        if value == sum {
+                            let length = i - j
                             if max < length {
                                 max = length
                             }
+                        } else if value < sum {
+                            break
                         }
-                    }
-                    
-                    if prevValueIndex == -1 {
-                        map[sum] = i
+                        j &-= 1
                     }
                 }
-                
-                sum &+= 1
-                isPrevDown = false
-            } else {
-                if sum == 0 {
-                    // test
-                    let prevValueIndex = map[sum]
-                    let length = i &- prevValueIndex
-                    if prevValueIndex != -1 && max < length {
-                        max = length
-                    }
+                if ch == "(" {
+                    sum &+= 1
+                    isPrevDown = false
+                } else {
+                    sum &-= 1
+                    isPrevDown = true
                 }
-                sum &-= 1
-                isPrevDown = true
+                i &+= 1
             }
-            
-            i &+= 1
-        }
 
-        if sum >= 0 {
-            // test
-            let prevValueIndex = map[sum]
-            let length = i &- prevValueIndex
-            if prevValueIndex != -1 && max < length {
-                max = length
+
+            if isPrevDown {
+                // test
+                buffer[i] = sum
+                var j = i
+                while j >= 0 {
+                    let value = buffer[j]
+                    if value == sum {
+                        let length = i &- j
+                        if max < length {
+                            max = length
+                        }
+                    } else if value < sum {
+                        break
+                    }
+                    j &-= 1
+                }
             }
         }
-
+        
         return max
     }
     
